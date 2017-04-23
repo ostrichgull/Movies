@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+
+  title = 'Movies';
+  description = `A basic Angular ${VERSION.full} CRUD demo using a Web Api back-end. Project setup provided by Angular CLI and styling by Bootstrap.`;
+
 }

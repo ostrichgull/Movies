@@ -1,0 +1,23 @@
+
+<table class="table">
+      <thead>
+          <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Rating</th>
+            <th>Release date</th>
+            <th>Price</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let movie of movies; let i = index">
+              <td>{{movie.Title}}</td>
+              <td>{{movie.Genre}}</td>
+              <td>{{movie.Rating}}</td>
+              <td>{{movie.ReleaseDate | date: 'dd/MM/yyyy'}}</td>
+              <td>{{movie.Price | number : '1.2-2'}}</td>
+              <td><button (click)="editMovie(movie.ID)" class="btn btn-primary">Update</button>
+              <button (click)="deleteMovie(movie.ID, i)" class="btn btn-primary">Delete</button></td> 
+          </tr>
+      </tbody>
+  </table>
